@@ -30,7 +30,7 @@ You can always use a USB connection to get started, but let's cover simple hook 
 	* A few male-to-male connector wires
 	<br/>
 
- ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/parts.JPG)
+ ![Project Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/parts.JPG)
 
 
 ###Set up
@@ -39,38 +39,38 @@ This section will cover how to hook up a Bluetooth device and an LED in order to
 
 - Connect the power and ground rails on the breadboard to the 5V and GND pins, respectively, on the Arduino. Using color coded wires (red and black) will make it easy to keep track of the power connections.
 
- ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/step01.JPG)
+ ![Project Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step01.JPG)
  
 - The next steps involve setting up the Bluetooth capabilities of the Arduino. Plug your Bluetooth device into the breadboard and connect the VCC and GND pins to the power and ground rails on the breadboard, respectively.
 
- ![VCC and ground]({{site.baseurl}}/images/remote-wiring/samples/basic/step02.JPG)
+ ![VCC and ground]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step02.JPG)
 
 - Connect the TX-0 pin on the Bluetooth device to the RX pin on the Arduino. Similarly, connect the RX-1 pin on the Bluetooth device to the TX pin on the Arduino.  If your Arduino has multiple RX and TX pins, connect the TX-0 Bluetooth pin to the RX0 Arduino pin, and connect the RX-1 Bluetooth pin to the TX0 Arduino pin.
 
- ![Send and Receive]({{site.baseurl}}/images/remote-wiring/samples/basic/step03.JPG)
+ ![Send and Receive]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step03.JPG)
 
 * Notice the yellow wire in the image goes from the transmit pin of the Bluetooth device to the receive pin of the Arduino and vice versa for the orange wire. This step is critical to establish serial communication between the Bluetooth device and the Arduino, allowing the messages transmitted from one device to be received by the other.
 
- ![Send and Receive]({{site.baseurl}}/images/remote-wiring/samples/basic/step03_2.JPG)
- ![Send and Receive]({{site.baseurl}}/images/remote-wiring/samples/basic/step03_3.JPG)
+ ![Send and Receive]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step03_2.JPG)
+ ![Send and Receive]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step03_3.JPG)
 
 * Make sure that your code is already uploaded on the Arduino before making this connection. The Arduino Uno uses the same serial (TX and RX) pins for flashing the device, which prevents any code from being uploaded to it when another device is connected to these serial pins.
 
 - Add an LED to the breadboard. Note that the longer (or bent) leg is the anode (positive) and the shorter leg is the cathode (negative).
 
- ![LED]({{site.baseurl}}/images/remote-wiring/samples/basic/step04.JPG)
+ ![LED]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step04.JPG)
 
 - Connect the cathode of the LED to the ground rail of the breadboard using a 330Ω resistor. A 330Ω resistor is striped orange, orange, brown, gold as shown in the image.
 
- ![LED Ground]({{site.baseurl}}/images/remote-wiring/samples/basic/step05.JPG)
+ ![LED Ground]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step05.JPG)
 
 - Connect the anode of the LED to any digital I/O pin on the Arduino - your choice will be reflected in the code. We are using pin 5 in the example.
 
- ![LED Power]({{site.baseurl}}/images/remote-wiring/samples/basic/step06.JPG)
+ ![LED Power]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/step06.JPG)
 
 - You setup is now ready! It should look similar to the setup shown in the image below. Again, if you would prefer to use USB, you may not have the serial wire connections shown here.
 
- ![Finished]({{site.baseurl}}/images/remote-wiring/samples/basic/final.JPG)
+ ![Finished]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/final.JPG)
 
 ##Software
 With your hardware assembled, it's time to remotely control your Arduino!  If you chose Option 1 on the "Set up your PC" section of this tutorial (meaning you downloaded our app from the Store), you can now open the app on your prepared Windows 10 device.  Follow the prompts on the Connections page to find your Arduino, and begin controlling your pins remotely!
@@ -81,7 +81,7 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
 
 -   Now that we're all set up, let's get into some code!  I've set up a project called RemoteBlinky by following the steps       in the "Set up your PC" section of this setup guide - you can start coding directly on top of the solution you set up        earlier. In the screenshot below, you will see the code-behind file MainPage.xaml.cs which simply creates a Bluetooth        connection object and passes it to the RemoteDevice class in the constructor. You'll see that I've specified my device       name in this example. You may also enumerate the available devices by invoking the static `.listAvailableDevicesAsync()`     function on BluetoothSerial (and USBSerial) class before constructing your object.  Take a look at the code below and        begin manually transferring the needed additions.
 
-    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project00.png)
+    ![Project Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project00.png)
 
     -   **Note for USB:**
         `USBSerial` has many options available to specify your device. In the constructor, you can provide the VID and PID of         your device, the VID only, or a `DeviceInformation` object (obtained from the above mentioned                                `listAvailableDevicesAsync` function). Similarly, `BluetoothSerial` allows you to provide a device id (as a string),         device name (also a string), or the `DeviceInformation` object.
@@ -99,11 +99,11 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
         `USBSerial usb = new USBSerial( "VID_2341", "PID_0043" );`<br/>
         is guaranteed to work **only** for the following hardware device:
 
-    ![USB Device]({{site.baseurl}}/images/remote-wiring/samples/basic/vidpid.png)
+    ![USB Device]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/vidpid.png)
 
 -   Next, I'm going to add a callback function to the ConnectionEstablished event on the BluetoothSerial object. This            function will automatically be called when the Bluetooth device is connected. You'll notice that I haven't implemented       anything in that function at this time. Last, call `.begin()` on the connection object to tell it to connect.
 
-    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project01.png)
+    ![Project Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project01.png)
  
     -   **Notes on baud rate for USB/Bluetooth:** Some hardware setups may require additional considerations when it comes to         setting up your Bluetooth device over the serial pins 0 and 1.
 
@@ -125,30 +125,30 @@ If you chose Option 2 or Option 3 on the "Set up your PC" page, you need to make
 
 - Jump over to the MainPage.xaml file by right-clicking MainPage.xaml in your Solution Explorer and choosing "View Designer" - the XAML code will appear alongside the Designer view.  We're now going to create buttons that will turn an LED on and off. You'll notice I've added button callbacks to the `Click` event & set the `IsEnabled` property to false, and you'll see why in the next step!
 
-    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project02.png)
+    ![Project Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project02.png)
 
 - I've implemented three functions in this step. First, the `OnConnectionEstablished` function now enables the buttons on the UI thread! This guarantees that the buttons will be enabled only when the Bluetooth connection is ready, as it typically takes a few seconds for this to happen.
 
 - I've also set up the `.digitalWrite()` calls in the button callbacks `OnButton_Click` and `OffButton_Click`
 
-    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/project04.png)
+    ![Project Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/project04.png)
 
 - Build! Use the settings shown in the image below to run the app you've written on your Windows device.
 
-    ![Regular Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/regulardeploy.PNG)
+    ![Regular Deploy]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/regulardeploy.PNG)
     
 - Your buttons will be enabled when the connection is established, and you can freely toggle your LED on and off at will! The app will look like the following picture when running on a Windows 10 PC.
 
-    ![Regular Start]({{site.baseurl}}/images/remote-wiring/samples/basic/regularstart.PNG)
+    ![Regular Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/regularstart.PNG)
 
 ###Deploying to a Windows Phone
 - You can also deploy your code to another Windows 10 device and utilize the same functionality there.  In order to get the code running on a Windows Phone, plug your phone into your development PC (the PC on which you've been writing the code above) using a microUSB cord.  Set the deploy destination to "Device" and the architecture to "ARM" in Visual Studio.  The proper settings for this deploy can be seen in the image below.
 
-    ![Device Deploy]({{site.baseurl}}/images/remote-wiring/samples/basic/devicedeploy.PNG) 
+    ![Device Deploy]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/devicedeploy.PNG) 
 
 - When you build and deploy, you should see the app below running on your phone.
 
-    ![Project Start]({{site.baseurl}}/images/remote-wiring/samples/basic/screenshot.png)
+    ![Project Start]({{site.baseurl}}/Resources/images/remote-wiring/samples/basic/screenshot.png)
 
 
 I really hope you enjoy replicating this project and using it as a baseline for an incredible new set of Maker projects!

@@ -36,7 +36,7 @@ Unlike the Raspberry Pi 2 and Minnowboard Max, you *do not* need an SD card to l
 
 ## Connect the DragonBoard to the Host PC
 1. First, we must enable download mode by setting the first boot switch on the back of the board to: ”USB Boot”. Refer to the image below for a demonstration of the proper configuration.
-<img class="image-border" src="{{site.baseurl}}/images/SetupDB410c/dragonboard_usbboot.png">
+<img class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/dragonboard_usbboot.png">
 The first of the four switches are set to ON, and the other 3 switches are set to OFF.
 
 2. Connect a USB cable to the Dragonboard’s microUSB port and connect the other end to an empty USB port on the Host PC
@@ -46,7 +46,7 @@ The first of the four switches are set to ON, and the other 3 switches are set t
 
 ## Download the Win10 IoT Core Image to the DragonBoard
 1. Start the DragonBoard Update Tool you installed during the previous step.
-<img class="image-border" src="{{site.baseurl}}/images/SetupDB410c/DB410c_UpdateTool.png" height="200">
+<img class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_UpdateTool.png" height="200">
 
 2. The Update Tool should detect the DragonBoard and the Connection Status should show: “Connected”.
 
@@ -66,7 +66,7 @@ The first of the four switches are set to ON, and the other 3 switches are set t
 1. Connect Mouse, Keyboard and Display to the board and plug in the power supply
 
 2. After a few seconds you should see the Win10 IoT boot-logo and shortly after you should see the Win10 IoT Core default application:
-<img class="image-border" src="{{site.baseurl}}/images/SetupDB410c/DB410c_DefaultApp.jpg" height="200">
+<img class="image-border" src="{{site.baseurl}}/Resources/images/SetupDB410c/DB410c_DefaultApp.jpg" height="200">
 
 ## Connecting to a Network
 

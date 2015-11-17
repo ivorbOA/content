@@ -31,7 +31,7 @@ Learn how to set up the MinnowBoard Max hardware and connect it to your computer
 
 	**NOTE:** If you don't have a local wired network, see [here]({{site.baseurl}}/{{page.lang}}/win10/ConnectToDevice.htm) for additional connection options.
 
-![mbm]({{site.baseurl}}/images/mbm.bmp){:device-images}
+![mbm]({{site.baseurl}}/Resources/images/mbm.bmp){:device-images}
 
 {: .thin-header}
 ##Update your device Firmware
@@ -81,15 +81,15 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 
 2. **Save the ISO** to a local folder
 
-	<img class="image-border" src="{{site.baseurl}}/images/mbm_iso.png">
+	<img class="image-border" src="{{site.baseurl}}/Resources/images/mbm_iso.png">
 
 3. Double clicking on the ISO (IoT Core MBM.iso) will automatically mount it as a virtual CD drive so you can access the contents.
 
-	<img class="image-border" src="{{site.baseurl}}/images/mbm_msi.PNG">
+	<img class="image-border" src="{{site.baseurl}}/Resources/images/mbm_msi.PNG">
 
 4. Install **Windows_10_IoT_Core_Mbm.msi**. When installation is complete, flash.ffu will be located at **C:\Program Files (x86)\Microsoft IoT\FFU\MinnowBoardMax**
 
-	<img class="image-border" src="{{site.baseurl}}/images/mbmffu.PNG">
+	<img class="image-border" src="{{site.baseurl}}/Resources/images/mbmffu.PNG">
 
 5. Eject the Virtual CD when done
 
@@ -100,12 +100,12 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 
 2. **Use IoTCoreImageHelper.exe** to flash the SD card. Search for "WindowsIoT" from start menu and select the shortcut "WindowsIoTImageHelper"
 
-	<img src="{{site.baseurl}}/images/ImagerHelperSearch.PNG">.
+	<img src="{{site.baseurl}}/Resources/images/ImagerHelperSearch.PNG">.
 
 3. The tool will enumerate devices as shown.
 	Select the SD card you want to flash and then provide the location of the ffu and flash the image.
 
-	<img src="{{site.baseurl}}/images/mbm_imagehelper.PNG">
+	<img src="{{site.baseurl}}/Resources/images/mbm_imagehelper.PNG">
 
 4. Click on the **Safely Remove Hardware** icon in your task tray and select your USB SD card reader to safely remove it from the system.  Failing to do this can cause corruption of the image.
 
@@ -132,7 +132,7 @@ The reason the bitness of the firmware has to match the bitness of the OS is tha
 	<kbd>efi\boot\bootia32.efi</kbd>
 
 * Once the device has booted, the DefaultApp will launch and display the IP address of MBM.
-![mbm]({{site.baseurl}}/images/DefaultAppMBM.png){:device-images}
+![mbm]({{site.baseurl}}/Resources/images/DefaultAppMBM.png){:device-images}
 
 * If you have loaded a previous version of IoT Core on your MBM you will need to go through the following steps for your first boot (make sure you have your SD card with IoT Core inserted):
   1. Power on MBM device and press F2.

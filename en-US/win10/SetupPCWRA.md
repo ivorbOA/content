@@ -53,13 +53,13 @@ Once you're done with this section, skip to the Device Capabilities section to f
 
 - Open Visual Studio.  Select *File -> New -> Project*.
 
- ![New Project]({{site.baseurl}}/images/remote-wiring/create_00.png)
+ ![New Project]({{site.baseurl}}/Resources/images/remote-wiring/create_00.png)
 
 - You can now select your language of choice. Windows Remote Arduino is a WinRT component, meaning it is compatible with C++, C#, or JavaScript - for this sample you'll want C#.
 
 - You'll see I have chosen C# by expanding the "Visual C#" menu. Select the "Windows" option and choose "Blank App (Windows Universal)" or "Blank App (Windows 8.1 Universal)" if you are building for Windows 8.1.
 
- ![Windows Universal]({{site.baseurl}}/images/remote-wiring/create_01.png)
+ ![Windows Universal]({{site.baseurl}}/Resources/images/remote-wiring/create_01.png)
 
 
 ###Step 3: Add Windows Remote Arduino projects to your solution
@@ -68,31 +68,31 @@ Once you're done with this section, skip to the Device Capabilities section to f
 
 - Right-click on your solution in the Solution Explorer and select *Add -> Existing Project*.
 
- ![Add existing project]({{site.baseurl}}/images/remote-wiring/project_00.png)
+ ![Add existing project]({{site.baseurl}}/Resources/images/remote-wiring/project_00.png)
 
 - Navigate to your local copy of the repository. You'll see here that I've cloned it to **C:\git\remote-wiring**, but you can choose a different directory. Then, open the appropriate solution folder for your build environment (either Windows 10 or Windows 8.1).
 
- ![Open the solution directory]({{site.baseurl}}/images/remote-wiring/compile_00.png)
+ ![Open the solution directory]({{site.baseurl}}/Resources/images/remote-wiring/compile_00.png)
 
 - We need to add three projects - Microsoft.Maker.Firmata, Microsoft.Maker.RemoteWiring, and Microsoft.Maker.Serial - to the project solution.  Let's start with the Serial project (Microsoft.Maker.Serial). Open this directory.
 
- ![Serial directory]({{site.baseurl}}/images/remote-wiring/project_01.png)
+ ![Serial directory]({{site.baseurl}}/Resources/images/remote-wiring/project_01.png)
 
 - Select the *.vcxproj* file. (If you are targeting Windows 8.1, you will first have to choose between Windows and Windows Phone platform directories. You do not have to do this for Windows 10, as it is Universal to all platforms.)
 
- ![Select vcxproj]({{site.baseurl}}/images/remote-wiring/project_02.png)
+ ![Select vcxproj]({{site.baseurl}}/Resources/images/remote-wiring/project_02.png)
 
 - Repeat the previous steps for all three Microsoft.Maker projects.  Once they've all been added to your solution, right-click on "References" in the original project you made, not one of the newly added Microsoft.Maker projects. Select *Add Reference*.
 
- ![Add Reference]({{site.baseurl}}/images/remote-wiring/project_05.png)
+ ![Add Reference]({{site.baseurl}}/Resources/images/remote-wiring/project_05.png)
 
 - Under the "Projects" tab, select all three of the Microsoft.Maker projects.
 
- ![Project References]({{site.baseurl}}/images/remote-wiring/project_06.png)
+ ![Project References]({{site.baseurl}}/Resources/images/remote-wiring/project_06.png)
 
 - Rebuild your solution by selecting *Build -> Rebuild Solution*.
 
- ![Rebuild All]({{site.baseurl}}/images/remote-wiring/compile_03.png)
+ ![Rebuild All]({{site.baseurl}}/Resources/images/remote-wiring/compile_03.png)
 
 - Verify you have added the necessary [Device Capabilities](#device-capabilities) to your project manifest.  Once you've completed the section below, your device will be ready to go!
 

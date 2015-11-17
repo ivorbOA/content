@@ -11,7 +11,7 @@ lang: en-US
    Web-based device management provides basic configuration and device management capabilities, in addition to advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows IoT Device. 
    
    Once connected to your local network, every Windows 10 IoT Core device will allow you to access these tools.
-![Webb Home]({{site.baseurl}}/images/webb/webb.png)
+![Webb Home]({{site.baseurl}}/Resources/images/webb/webb.png)
 
 <hr>
 
@@ -22,11 +22,11 @@ lang: en-US
    To get Web-based device management up and running, you first need to connect your device to your network. To do so, connect an Ethernet cable from your board into to your local network.
 
 2. **Find your devices IP address**
-    * If your device is connected to a monitor, your IP address is listed on the front page. If you do not see an IP address, your board is not properly connected to your network. ![DefaultApp IP]({{site.baseurl}}/images/webb/defaultapp_ip.png)
-	* If you have already [set up your PC]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your board's IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network.![IotWatcher IP]({{site.baseurl}}/images/IoTCoreWatcher.PNG)
+    * If your device is connected to a monitor, your IP address is listed on the front page. If you do not see an IP address, your board is not properly connected to your network. ![DefaultApp IP]({{site.baseurl}}/Resources/images/webb/defaultapp_ip.png)
+	* If you have already [set up your PC]({{site.baseurl}}/{{page.lang}}/win10/SetupPC.htm), you should have **Windows IoT Core Watcher** installed on your PC. Launch Windows IoT Core Watcher and find your machine name. Listed next to the machine name is your board's IP address. If you cannot find your machine, either your PC or your board is not properly connected to your network.![IotWatcher IP]({{site.baseurl}}/Resources/images/IoTCoreWatcher.PNG)
 
 3. **Connect to Web-based device management through your browser**
-    * Enter the IP address into the address bar. Add :8080 onto the end.![Browser IP]({{site.baseurl}}/images/webb/browser_ip.png)
+    * Enter the IP address into the address bar. Add :8080 onto the end.![Browser IP]({{site.baseurl}}/Resources/images/webb/browser_ip.png)
     * In the credentials dialog, use the default username and password: `Administrator`, `p@ssw0rd`
     * Web-based device management should launch and display the web management home screen!
 
@@ -46,7 +46,7 @@ This tool is still in beta. Some of the features are untested or still being wor
 
 ###**Top Toolbar**
     
-The top toolbar allows you to shutdown, reboot and give feedback.![Webb toolbar]({{site.baseurl}}/images/webb/toolbar.png)
+The top toolbar allows you to shutdown, reboot and give feedback.![Webb toolbar]({{site.baseurl}}/Resources/images/webb/toolbar.png)
 
 * Shutdown - Shuts down the device.
 * Reboot - Reboots the device.
@@ -67,7 +67,7 @@ Provides install/uninstall functionality for AppX packages and bundles on your d
 
 **Installing an app**
 
-1.	Once you've created your first app, you can remotely install it onto your device. After building from Visual Studio, an output folder will be generated. <img class = "screen-snippet" src="{{site.baseurl}}/images/webb/installapp0.png">	
+1.	Once you've created your first app, you can remotely install it onto your device. After building from Visual Studio, an output folder will be generated. <img class = "screen-snippet" src="{{site.baseurl}}/Resources/images/webb/installapp0.png">	
 2.	In WebB, click browse and find your .appx.
 3.	Click certificate browse, find the .cer file. 
 4.	Add dependencies. If you have more than one, and you will have to add each one by one. 	
@@ -83,34 +83,34 @@ Provides install/uninstall functionality for AppX packages and bundles on your d
     
 
 **Deployment log**
-    <img class="screen-snippet" src="{{site.baseurl}}/images/webb/deploymentlog.png">
+    <img class="screen-snippet" src="{{site.baseurl}}/Resources/images/webb/deploymentlog.png">
     The deployment log is a progress checklist indicating how far you are with deploying an app.
 
 ###**Processes**
 Much like the Task Manager on your PC, this section allows you to see which processes are currently running as well as the memory usage each are holding.  Clicking the X next to a process terminates it.
 
 ###**Performance**
-Displays real-time diagnostics of CPU and I/O usage, and memory stats.<img src="{{site.baseurl}}/images/webb/iograph.png">
+Displays real-time diagnostics of CPU and I/O usage, and memory stats.<img src="{{site.baseurl}}/Resources/images/webb/iograph.png">
 
 * CPU usage maps the central processing unit's usage.
 
-<img src="{{site.baseurl}}/images/webb/cpugraph.png">
+<img src="{{site.baseurl}}/Resources/images/webb/cpugraph.png">
 
 * I/O shows disk utilization (i.e reading and writing to the storage)
 
 ###**Debugging**
 The debugging section is great for identifying problems within your application.
 
-<img src="{{site.baseurl}}/images/webb/debug1.png">
+<img src="{{site.baseurl}}/Resources/images/webb/debug1.png">
 
 * Any system crashes will automatically be logged and available to view through the web management tool.  You can then download the kernel dump and try to figure out what's going on.
 
-<img src="{{site.baseurl}}/images/webb/debug2.png">
+<img src="{{site.baseurl}}/Resources/images/webb/debug2.png">
 
 * This is similar to Live kernel dumps, but for the user mode processes. 
 * Clicking the download button will cause a 'minidump', and the entire state of that process will be downloaded. This is great for debugging hanging processes.
 
-<img src="{{site.baseurl}}/images/webb/debug3.png">
+<img src="{{site.baseurl}}/Resources/images/webb/debug3.png">
 
 * When your IoT Core device crashes, your machine attempts to send a report up to the Windows error reporting service. When this happens, a log of the report is stored and becomes available for viewing.
 * The error reports do not contain dump information and are more targeted towards apps and processes. 

@@ -6,10 +6,10 @@ Note that the polarity of the LED is important. Make sure the shorter leg (-) is
 
 And here is the JP1 connector on the MBM:
 
-<img src="{{site.baseurl}}/images/PinMappings/MBM_Pinout.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/MBM_Pinout.png" height="400">
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 
-<img src="{{site.baseurl}}/images/Blinky/breadboard_assembled.png" height="500">
+<img src="{{site.baseurl}}/Resources/images/Blinky/breadboard_assembled.png" height="500">
 
 <sub>*Image made with [Fritzing](http://fritzing.org/){:target="_blank"}*</sub>

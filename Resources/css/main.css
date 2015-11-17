@@ -139,7 +139,7 @@ a:hover {
 }
 
 .downloads-image {
-    background-image: url('../images/DevelopmentBoards.PNG');
+    background-image: url('../Resources/images/DevelopmentBoards.PNG');
     background-size: contain;
 	background-repeat: no-repeat;
     background-position: center;
@@ -164,7 +164,7 @@ a:hover {
     }
 
 .build-2015-background {
-    background-image: url('../images/sf_coverB.jpg');
+    background-image: url('../Resources/images/sf_coverB.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -178,7 +178,7 @@ a:hover {
     }
 
 .build-2015-windows {
-    background-image: url('../images/IoT-rp2-banner-edit.png');
+    background-image: url('../Resources/images/IoT-rp2-banner-edit.png');
     background-size: cover;
     background-position: center;
     width: 100%;

@@ -2,7 +2,7 @@
 
 For reference, the functionality of the low-speed expansion connector is outlined in the following diagram
 
-![DragonBoard Low-Speed Expansion Connector](../../../images/PinMappings/DB_Pinout.png)
+![DragonBoard Low-Speed Expansion Connector](../../../Resources/images/PinMappings/DB_Pinout.png)
 
 Perform the following steps to create the circuit:
 
@@ -13,7 +13,7 @@ Perform the following steps to create the circuit:
 
 Here is an illustration of what your breadboard might look like with the circuit assembled:
 
-![DragonBoard BreadBoard](../../../images/Blinky/breadboard_assembled_db_kit.png)
+![DragonBoard BreadBoard](../../../Resources/images/Blinky/breadboard_assembled_db_kit.png)
 
 <sub>Image made with [Fritzing](http://fritzing.org/){:target="_blank"}</sub>
 

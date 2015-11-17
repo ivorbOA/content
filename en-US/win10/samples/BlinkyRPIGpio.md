@@ -7,7 +7,7 @@
 
 And here is the pinout of the RPi2:
 
-<img src="{{site.baseurl}}/images/PinMappings/RP2_Pinout.png" height="400">
+<img src="{{site.baseurl}}/Resources/images/PinMappings/RP2_Pinout.png" height="400">
 
 Here is an example of what your breadboard might look like with the circuit assembled:
 

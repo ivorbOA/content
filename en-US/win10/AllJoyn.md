@@ -22,10 +22,10 @@ The AllJoyn framework establishes a standard by which devices and apps can adver
 * *Routing Nodes (RN)* - Also referred to as "Routers", they can talk to any node.
 * *Leaf Nodes (LN)* - Also referred to as "Applications", they can talk to routing nodes or other leaf nodes via routing nodes.
 
-![AllJoyn Routers & Apps]({{site.baseurl}}/images/AllJoyn/AllJoyn_Routers_Apps.png)
+![AllJoyn Routers & Apps]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_Routers_Apps.png)
 
 The below diagram shows the high-level software architecture of the AllJoyn framework:
- ![AllJoyn Architecture]({{site.baseurl}}/images/AllJoyn/AllJoyn_Architecture.png)
+ ![AllJoyn Architecture]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_Architecture.png)
 
 * *AllJoyn App Layer* - Defines the user experience
 * *AllJoyn Service Frameworks* - Interoperable, cross-platform modules that define common interfaces between devices
@@ -37,7 +37,7 @@ The AllJoyn framework comes in 2 flavors:
 
 * *Standard* - Primarily used for non-embedded devices with support for full set of core libraries
 * *Thin* - Suitable for IoT devices that are resource constrained and requires an AllJoyn router in the network
- ![AllJoyn Frameworks]({{site.baseurl}}/images/AllJoyn/AllJoyn_Frameworks.png)
+ ![AllJoyn Frameworks]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_Frameworks.png)
 
 AllJoyn enables proximity based communication, allowing transport to occur over Ethernet, Wi-Fi, serial, and Power Line (PLC).  However, the AllJoyn framework is transport-agnostic, thus allowing for any future transport mechanisms to be added.  Additionally, bridge software can be created to link the AllJoyn framework to other systems like Zigbee, Z-wave, or the cloud.  See more details & samples below on the AllJoyn Device System Bridge contribution to the AllSeen Alliance from Microsoft.
 
@@ -45,7 +45,7 @@ AllJoyn enables proximity based communication, allowing transport to occur over 
 
 Device System Bridges (DSBs) can help facilitate communication across existing incompatible networks.  DSBs offer a cost efficient and quick way to bring existing devices to AllJoyn as virtual devices on the AllJoyn network.  This is done through a pre-baked AllJoyn producer implementation (Bridge), and implementing calls to SDK hooks to support translation of AllJoyn concepts to target devices (Adapter).  Developers need not modify AllJoyn producers with a DSB, unless a change in the default behavior of the Bridge is desired.  For more information on the purpose of Device System Bridges and its structure, check out this
 [whitepaper.](https://git.allseenalliance.org/cgit/dsb.git/plain/Docs/AllJoyn - Device System Bridge - Whitepaper v1.0.pdf){:target="_blank"}
-![AllJoyn DSB Architecture]({{site.baseurl}}/images/AllJoyn/AllJoyn_DSBArch.png)
+![AllJoyn DSB Architecture]({{site.baseurl}}/Resources/images/AllJoyn/AllJoyn_DSBArch.png)
 
 With the [AllJoyn Device System Bridge contribution](https://wiki.allseenalliance.org/gateway/dsb){:target="_blank"} from Microsoft, you can connect existing devices that use BACnet or Z-Wave to an AllJoyn network, thereby enabling existing devices to interact with new AllJoyn devices, as well as enabling cloud connectivity across all devices on the network.   There is also a useful [tool](https://github.com/MS-brock/AllJoynToasterDemo/tree/master/getajxml){:target="_blank"} published which generates AllJoyn introspection XML from an existing AllJoyn device, with usage described in detail in a posting on [channel9.](https://channel9.msdn.com/Blogs/Internet-of-Things-Blog/Step-By-Step-Building-AllJoyn-Universal-Windows-Apps-for-Windows-10-Public-Preview){:target="_blank"}
 Be sure to check out samples and additional documentation below.  We hope you’ll help build many more IoT bridges and contribute your bridges to the AllSeen Alliance.
